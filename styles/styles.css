@@ -1,0 +1,13 @@
+#canvas {
+  background-color: lightgray;
+  box-shadow: 10px 5px 21px rgba(0, 0, 0, 0.349);
+}
+
+#logo {
+    margin-bottom: -50px;
+  margin: auto;
+  display: block;
+  width: 250px;
+  text-align: center;
+  box-shadow: 10px 5px 21px rgba(0, 0, 0, 0.349);
+}
