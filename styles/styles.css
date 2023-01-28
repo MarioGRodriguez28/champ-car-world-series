@@ -1,13 +1,44 @@
+body{
+background-image: url(../images/road-forest.jpg); 
+background-size: cover;
+margin: 0;
+
+}
+
 #canvas {
   background-color: lightgray;
   box-shadow: 10px 5px 21px rgba(0, 0, 0, 0.349);
+  background-image: url(../images/2112_w032_n003_289b_p1_289.jpg); 
+  background-size: cover;
+  background-position: 100%;
+
 }
 
-#logo {
-    margin-bottom: -50px;
-  margin: auto;
-  display: block;
-  width: 250px;
-  text-align: center;
-  box-shadow: 10px 5px 21px rgba(0, 0, 0, 0.349);
+
+#start-btn, #restart-btn, #pause-btn {
+  background-color: #f7791a;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  margin-top: 40px;
+  border-radius: 20px; 
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.195);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+ 
+#canvas{
+  display: none;
+
+}
+
+#gameover-screen{
+  display: none;
+
 }
