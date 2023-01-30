@@ -1,11 +1,12 @@
+// console.log("Prueba pruebita Player")
 class Carrito {
 
     // ----------------------------------------------------propiedades del Carrito----------------------------------------------------
     constructor() {
-      this.x = 0; // posicion en eje X
-      this.y = 0; // posicion en eje Y
-      this.h = 40; // altura
-      this.w = 45; // ancho
+      this.x =10; 
+      this.y = 650; 
+      this.h = 250; 
+      this.w = 220;
       this.image = new Image()
       this.image.src = "./images/RacingCar1.png"
     }

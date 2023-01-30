@@ -5,16 +5,6 @@ margin: 0;
 
 }
 
-#canvas {
-  background-color: lightgray;
-  box-shadow: 10px 5px 21px rgba(0, 0, 0, 0.349);
-  background-image: url(../images/2112_w032_n003_289b_p1_289.jpg); 
-  background-size: cover;
-  background-position: 100%;
-
-}
-
-
 #start-btn, #restart-btn, #pause-btn {
   background-color: #f7791a;
   color: white;
@@ -25,6 +15,7 @@ margin: 0;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.195);
 }
 
+
 .container {
   display: flex;
   flex-direction: column;
@@ -32,8 +23,7 @@ margin: 0;
   align-items: center;
   margin: 50px;
 }
- 
-#canvas{
+ #canvas{
   display: none;
 
 }
@@ -42,3 +32,18 @@ margin: 0;
   display: none;
 
 }
+#canvas {
+  background-color: lightgray;
+  /* box-shadow: 10px 5px 21px rgba(0, 0, 0, 0.349);
+  background-image: url(../images/2112_w032_n003_289b_p1_289.jpg); 
+  background-size: cover;
+  background-position: 100%; */
+
+}
+
+
+
+
+
+
+

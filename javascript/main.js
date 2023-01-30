@@ -1,32 +1,40 @@
-// * GLOBAL VARIABLES
+// console.log("Prueba pruebita main")
+// // * GLOBAL VARIABLES
+const startBtnDOM = document.querySelector("#start-btn")
+const canvas = document.querySelector("#canvas")
+const startScreenDOM = document.querySelector("#start-game")
+const ctx = canvas.getContext("2d")
+// const gameoverScreenDOM = document.querySelector("#gameover-screen")
+// const pauseBtnDOM = document.querySelector("#pause-btn")
+// const restartBtnDOM = document.querySelector("#restart-btn")
+// let game;
 
 
 
 
+// // * STATE MANAGEMENT FUNCTIONS
 
-// * STATE MANAGEMENT FUNCTIONS
+const startGame = () => {
+  // console.log("intentando iniciar el juego")
 
-
-
-  // 1. cambiar la pantalla
- 
-  
-
-  // 2. crear un objeto de la clase Game
- 
-  
-
-
-
-  // 3. iniciar el juego (el game loop)
-
-  
-
+  startScreenDOM.style.display = "none";
+  canvas.style.display = "block";
 
   
+ const game = new Game() 
+  console.log(game)
 
 
 
-// * ADD EVENT LISTENERS
+  game.gameLoop()
 
+}
+
+
+  
+
+
+
+// // * ADD EVENT LISTENERS
+startBtnDOM.addEventListener("click", startGame)
 

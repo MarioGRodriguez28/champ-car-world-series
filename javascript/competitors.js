@@ -1,3 +1,4 @@
+// console.log("Prueba pruebita Competitors")
 class Competidores {
 
     // propiedades de los Competidores
