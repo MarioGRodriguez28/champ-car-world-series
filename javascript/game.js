@@ -29,6 +29,8 @@ class Game {
     this.competitor.drawComp();
     //Velocidad
     this.competitor.speedComp();
+    // //Movimiento
+    // this.car.moveCar()
 
 
 

@@ -26,10 +26,14 @@ const startGame = () => {
 
 // ADD EVENT LISTENERS
 startBtnDOM.addEventListener("click", startGame);
+
 window.addEventListener("keydown", (event) => {
   if (event.code === "ArrowRight") {
     console.log("Muevete carrito");
-    game.car.moveCar()
+    game.car.moveCar("Derecha")
    
-  }
+  }else if (event.code === "ArrowLeft") {
+    console.log("Muevete ´pal otro lado");
+    game.car.moveCar("Izquierda")}
+    
 });
