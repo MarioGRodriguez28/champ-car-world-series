@@ -1,18 +1,16 @@
 // console.log("Prueba pruebita main")
-// // * GLOBAL VARIABLES
-const startBtnDOM = document.querySelector("#start-btn")
-const canvas = document.querySelector("#canvas")
-const startScreenDOM = document.querySelector("#start-game")
-const ctx = canvas.getContext("2d")
+// GLOBAL VARIABLES
+const startBtnDOM = document.querySelector("#start-btn");
+const canvas = document.querySelector("#canvas");
+const startScreenDOM = document.querySelector("#start-game");
+const ctx = canvas.getContext("2d");
+let game;
 // const gameoverScreenDOM = document.querySelector("#gameover-screen")
 // const pauseBtnDOM = document.querySelector("#pause-btn")
 // const restartBtnDOM = document.querySelector("#restart-btn")
-// let game;
 
 
-
-
-// // * STATE MANAGEMENT FUNCTIONS
+// STATE MANAGEMENT FUNCTIONS
 
 const startGame = () => {
   // console.log("intentando iniciar el juego")
@@ -20,21 +18,18 @@ const startGame = () => {
   startScreenDOM.style.display = "none";
   canvas.style.display = "block";
 
-  
- const game = new Game() 
-  console.log(game)
+  game = new Game();
+  console.log(game);
 
+  game.gameLoop();
+};
 
-
-  game.gameLoop()
-
-}
-
-
-  
-
-
-
-// // * ADD EVENT LISTENERS
-startBtnDOM.addEventListener("click", startGame)
-
+// ADD EVENT LISTENERS
+startBtnDOM.addEventListener("click", startGame);
+window.addEventListener("keydown", (event) => {
+  if (event.code === "ArrowRight") {
+    console.log("Muevete carrito");
+    game.car.moveCar()
+   
+  }
+});

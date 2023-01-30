@@ -5,8 +5,8 @@ class Game {
     this.bg = new Image();
     this.bg.src = "./images/pista.jpg";
     this.car = new Carrito();
-    console.log(this.Carrito);
-    this.competitor;
+    this.competitor = new Competidores();
+
     // Que los competidores se acerquen
     // Que los competidores aceleren
     // Spawning de competidores
@@ -16,18 +16,24 @@ class Game {
     // Game Over
   }
 
-  gameLoop = () => {
-    // console.log("Recursion");
-
+  drawBG = () => {
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
-    ctx.drawImage(
-      this.car.image,
-      this.car.x,
-      this.car.y,
-      this.car.w,
-      this.car.h
-    );
+  };
 
+  gameLoop = () => {
+    //Fondo
+    this.drawBG();
+    //Car
+    this.car.drawCar();
+    //Competidores
+    this.competitor.drawComp();
+    //Velocidad
+    this.competitor.speedComp();
+
+
+
+
+    
     requestAnimationFrame(this.gameLoop);
   };
 }
