@@ -36,15 +36,15 @@ class Game {
         eachComp.y < this.car.y + this.car.h &&
         eachComp.h + eachComp.y > this.car.y
       ) {
-        console.log("Choque");
+        
         this.gameOver();
       }
     });
   };
 
   compRace = () => {
-    if (this.competitorArr.length === 0 || this.frame % 70 === 0) {
-      let carPosX = Math.random() * -10;
+    if (this.competitorArr.length === 0 || this.frame % 120 === 0) {
+      let carPosX = Math.random() * (30);
 
       let compAdd = new Competidores(carPosX, true);
       this.competitorArr.push(compAdd);
@@ -54,6 +54,7 @@ class Game {
     }
   };
 
+  
   drawBG = () => {
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
   };

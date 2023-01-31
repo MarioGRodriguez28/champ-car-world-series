@@ -4,15 +4,15 @@ class Competidores {
   constructor(xPos, otherCar) {
     this.x = xPos;
     this.y = -110;
-    this.w = 280;
-    this.h = 180;
-    this.speed = 10;
+    this.w = 116;
+    this.h = 210;
+    this.speed = 5;
     this.image = new Image();
-    if(otherCar ===true){this.image.src= "./images/RacingCar3.png"
-  }else {this.image.src= "../images/RacingCar6.png"}
-    
-    
-   
+    if (otherCar === true) {
+      this.image.src = "./images/RacingCar3.png";
+    } else {
+      this.image.src = "./images/RacingCar6.png";
+    }
   }
 
   drawComp = () => {

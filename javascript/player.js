@@ -2,11 +2,11 @@
 class Carrito {
   // ----------------------------------------------------propiedades del Carrito----------------------------------------------------
   constructor() {
-    this.x = 100;
+    this.x = 190;
     this.y = 650;
-    this.w = 280;
-    this.h = 180;
-    this.speed = 50;
+    this.w = 116;
+    this.h = 210;
+    this.speed = 180;
     this.image = new Image();
     this.image.src = "./images/RacingCar1.png";
     // this.speedMove = 10;
