@@ -34,21 +34,30 @@ class Game {
     //Limpiar Canvas
     this.clearCanvas();
 
-    //Sumar competidores
-    this.compRace;
+    
+    
     // Movimiento de competidores
     this.competitorArr.forEach((eachComp) => {
       eachComp.speedComp();
     });
-    //Competidores
-    this.competitorArr.forEach((eachComp) => {
-      eachComp.drawComp();
-      
-    });
+    
+    //Sumar competidores
+    this.compRace;
+    
     //Fondo
     this.drawBG();
+
+    //Competidores
+    this.competitorArr.forEach((eachComp) => {
+      eachComp.drawComp();      
+    });
+    
     //Car
     this.car.drawCar();
+
+
+
+
 
     requestAnimationFrame(this.gameLoop);
   };
