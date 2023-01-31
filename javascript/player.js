@@ -17,12 +17,12 @@ class Carrito {
   };
 
   moveCar = (direccion) => {
-    if (direccion == "Derecha" && this.x < 330) {
+    if (direccion === "Derecha" && this.x < 330) {
       this.x += this.speed;
       console.log(this.x);
     } 
     
-    else  if (direccion == "Izquierda" && this.x > -50 ) 
+    else  if (direccion === "Izquierda" && this.x > -50 ) 
     this.x -= this.speed;
     console.log(this.x);
   };

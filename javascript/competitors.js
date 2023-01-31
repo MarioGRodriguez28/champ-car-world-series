@@ -8,7 +8,9 @@ class Competidores {
     this.h = 180;
     this.speed = 2;
     this.image = new Image();
-    this.image.src = "./images/RacingCar10.png";
+    this.image.src= "./images/RacingCar3.png"
+    
+   
   }
 
   drawComp = () => {

@@ -5,7 +5,7 @@ class Game {
     this.bg = new Image();
     this.bg.src = "./images/pista.jpg";
     this.car = new Carrito();
-    this.competitor = new Competidores();
+    this.competitorArr = [];
 
     // Que los competidores se acerquen
     // Que los competidores aceleren
@@ -20,22 +20,36 @@ class Game {
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
   };
 
+  compRace = () => {
+    if( this.competitorArr.length === 0) {
+      let compAdd = new Competidores();
+    this.competitorArr.push(compAdd);
+    }
+    
+  };
+  clearCanvas = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  };
   gameLoop = () => {
+    //Limpiar Canvas
+    this.clearCanvas();
+
+    //Sumar competidores
+    this.compRace;
+    // Movimiento de competidores
+    this.competitorArr.forEach((eachComp) => {
+      eachComp.speedComp();
+    });
+    //Competidores
+    this.competitorArr.forEach((eachComp) => {
+      eachComp.drawComp();
+      
+    });
     //Fondo
     this.drawBG();
     //Car
     this.car.drawCar();
-    //Competidores
-    this.competitor.drawComp();
-    //Velocidad
-    this.competitor.speedComp();
-    // //Movimiento
-    // this.car.moveCar()
 
-
-
-
-    
     requestAnimationFrame(this.gameLoop);
   };
 }
