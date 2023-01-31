@@ -3,18 +3,13 @@
 const startBtnDOM = document.querySelector("#start-btn");
 const canvas = document.querySelector("#canvas");
 const startScreenDOM = document.querySelector("#start-game");
+const gameOverScreenDom = document.querySelector("#gameover-screen");
 const ctx = canvas.getContext("2d");
 let game;
-// const gameoverScreenDOM = document.querySelector("#gameover-screen")
-// const pauseBtnDOM = document.querySelector("#pause-btn")
-// const restartBtnDOM = document.querySelector("#restart-btn")
-
 
 // STATE MANAGEMENT FUNCTIONS
 
 const startGame = () => {
-  // console.log("intentando iniciar el juego")
-
   startScreenDOM.style.display = "none";
   canvas.style.display = "block";
 
@@ -29,11 +24,8 @@ startBtnDOM.addEventListener("click", startGame);
 
 window.addEventListener("keydown", (event) => {
   if (event.code === "ArrowRight") {
-    
-    game.car.moveCar("Derecha")
-   
-  }else if (event.code === "ArrowLeft") {
-    
-    game.car.moveCar("Izquierda")}
-    
+    game.car.moveCar("Derecha");
+  } else if (event.code === "ArrowLeft") {
+    game.car.moveCar("Izquierda");
+  }
 });

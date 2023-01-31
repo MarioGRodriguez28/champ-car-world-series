@@ -4,45 +4,66 @@ class Game {
   constructor() {
     this.bg = new Image();
     this.bg.src = "./images/pista.jpg";
+
     this.car = new Carrito();
+
     this.competitorArr = [];
     this.frame = 1;
-    this.spaceCar = 1200
 
-    // Que los competidores se acerquen
-    // Que los competidores aceleren
-    // Spawning de competidores
-    // Que el car se mueva a los lados
-    // Propiedades del Car
-    // Colisiones contra los competidores y los bordes
-    // Game Over
+    this.spaceCar = 150;
+    this.gameOn = true;
   }
+
+
+
+
+
+
+
+  gameOver = () => {
+    this.gameOn = false;
+
+    canvas.style.display = "none";
+
+    gameOverScreenDom.style.display = "flex";
+  };
+
+  colisionCar = () => {
+    this.competitorArr.forEach((eachComp) => {
+      if (
+        eachComp.x < this.car.x + this.car.w &&
+        eachComp.x + eachComp.w > this.car.x &&
+        eachComp.y < this.car.y + this.car.h &&
+        eachComp.h + eachComp.y > this.car.y
+      ) {
+        console.log("Choque");
+        this.gameOver();
+      }
+    });
+  };
+
+  compRace = () => {
+    if (this.competitorArr.length === 0 || this.frame % 70 === 0) {
+      let carPosX = Math.random() * -10;
+
+      let compAdd = new Competidores(carPosX, true);
+      this.competitorArr.push(compAdd);
+
+      let compAdd2 = new Competidores(compAdd.x + this.spaceCar, false);
+      this.competitorArr.push(compAdd2);
+    }
+  };
 
   drawBG = () => {
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
   };
 
-  compRace = () => {
-    if (this.competitorArr.length === 0 || this.frame % 70 ===0)   {
-
-      let carPosX = Math.random() * (300)
-      
-  
-      let compAdd = new Competidores(carPosX);
-      this.competitorArr.push(compAdd);
-
-
-
-      let compAdd2 = new Competidores(compAdd.x + this.spaceCar)
-      this.competitorArr.push(compAdd2)
-
-    }
-  };
   clearCanvas = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   };
+
   gameLoop = () => {
-    this.frame++
+    this.frame++;
     //Limpiar Canvas
     this.clearCanvas();
 
@@ -53,6 +74,9 @@ class Game {
 
     //Sumar competidores
     this.compRace();
+
+    //Colisiones
+    this.colisionCar();
 
     //Fondo
     this.drawBG();
@@ -65,6 +89,9 @@ class Game {
     //Car
     this.car.drawCar();
 
-    requestAnimationFrame(this.gameLoop);
+    //
+    if (this.gameOn === true) {
+      requestAnimationFrame(this.gameLoop);
+    }
   };
 }
