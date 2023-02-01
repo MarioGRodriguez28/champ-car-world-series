@@ -3,7 +3,7 @@ class Game {
   // propiedades
   constructor() {
     this.bg = new Image();
-    this.bg.src = "../images/pista.jpg";
+    this.bg.src = "./images/pista.jpg";
 
     this.car = new Carrito();
 
