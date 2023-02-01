@@ -3,7 +3,7 @@ class Game {
   // propiedades
   constructor() {
     this.bg = new Image();
-    this.bg.src = "./images/pista-3-carriles.jpg";
+    this.bg.src = "../images/pista.jpg";
 
     this.car = new Carrito();
 
@@ -13,11 +13,6 @@ class Game {
     this.spaceCar = 350;
     this.gameOn = true;
   }
-
-
-
-
-
 
   gameOver = () => {
     this.gameOn = false;
@@ -35,7 +30,6 @@ class Game {
         eachComp.y < this.car.y + this.car.h &&
         eachComp.h + eachComp.y > this.car.y
       ) {
-        
         this.gameOver();
       }
     });
@@ -43,21 +37,18 @@ class Game {
 
   compRace = () => {
     if (this.competitorArr.length === 0 || this.frame % 120 === 0) {
-      let carPosX = Math.random() * (500);
+      let carPosX = Math.floor(Math.random() * 10);
 
       let compAdd = new Competidores(carPosX, true);
       this.competitorArr.push(compAdd);
 
-      
-      setInterval(() => {
-        let compAdd2 = new Competidores(compAdd.x + this.spaceCar, false)
-      this.competitorArr.push(compAdd2)
-      }, 3500);
-      
-
+      setTimeout(() => {
+        let compAdd2 = new Competidores(compAdd.x + this.spaceCar, false);
+        this.competitorArr.push(compAdd2);
+      }, 3100);
     }
-
-  };  
+    clearInterval(setTimeout);
+  };
 
   drawBG = () => {
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
@@ -85,7 +76,6 @@ class Game {
 
     //Fondo
     this.drawBG();
-    
 
     //Competidores
     this.competitorArr.forEach((eachComp) => {

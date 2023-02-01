@@ -6,7 +6,7 @@ class Competidores {
     this.y = -110;
     this.w = 116;
     this.h = 210;
-    this.speed = 5;
+    this.speed = 6;
     this.image = new Image();
     if (oneCar === true) {
       this.image.src = "./images/RacingCar3.png";
