@@ -3,14 +3,14 @@ class Game {
   // propiedades
   constructor() {
     this.bg = new Image();
-    this.bg.src = "./images/pista.jpg";
+    this.bg.src = "./images/pista-3-carriles.jpg";
 
     this.car = new Carrito();
 
     this.competitorArr = [];
     this.frame = 1;
 
-    this.spaceCar = 150;
+    this.spaceCar = 350;
     this.gameOn = true;
   }
 
@@ -43,35 +43,22 @@ class Game {
 
   compRace = () => {
     if (this.competitorArr.length === 0 || this.frame % 120 === 0) {
-      let carPosX = Math.random() * (30);
+      let carPosX = Math.random() * (500);
 
       let compAdd = new Competidores(carPosX, true);
       this.competitorArr.push(compAdd);
 
-      let compAdd2 = new Competidores(compAdd.x + this.spaceCar, false);
-      this.competitorArr.push(compAdd2);
+      
+      setInterval(() => {
+        let compAdd2 = new Competidores(compAdd.x + this.spaceCar, false)
+      this.competitorArr.push(compAdd2)
+      }, 3500);
+      
+
     }
-//-----------------------------------------------
-    // for (let i = 0; i < Math.floor(Math.random() * 2) + 1; i++) {
-    //   let carPosX = Math.floor(Math.random() * 3)
-  
-      // if (this.competitorArr.length > 0) {
-      //   if (carPosX === this.competitorArr[this.competitorArr.length - 1][1]) {
-      //     i--;
-      //   }
-      //   else {
-      //     this.competitorArr.push([carPosX, this.competitorArr* -1]);
-      //   }
-      // }
-      // else {
-      //   this.competitorArr.push([carPosX, this.competitorArr * -1]);
-      // } 
-      //console.log("esto que hace")
-    // }
 
   };  
 
-  
   drawBG = () => {
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
   };
@@ -98,6 +85,7 @@ class Game {
 
     //Fondo
     this.drawBG();
+    
 
     //Competidores
     this.competitorArr.forEach((eachComp) => {

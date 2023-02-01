@@ -20,11 +20,23 @@ const startGame = () => {
   game.gameLoop();
 };
 
+const restartGame = () => {
+  startScreenDOM.style.display = "none";
+  canvas.style.display = "block";
+
+  game = new Game();
+  console.log(game);
+
+  game.gameLoop();
+};
+
 
 
 // ADD EVENT LISTENERS
 startBtnDOM.addEventListener("click", startGame);
-restartBtnDOM.addEventListener("click", startGame);
+restartBtnDOM.addEventListener("click", restartGame);
+
+
 window.addEventListener("keydown", (event) => {
   if (event.code === "ArrowRight") {
     game.car.moveCar("Derecha");

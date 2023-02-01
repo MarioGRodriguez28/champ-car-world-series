@@ -2,7 +2,7 @@
 class Carrito {
   // ----------------------------------------------------propiedades del Carrito----------------------------------------------------
   constructor() {
-    this.x = 190;
+    this.x = 270;
     this.y = 650;
     this.w = 116;
     this.h = 210;
@@ -17,13 +17,13 @@ class Carrito {
   };
 
   moveCar = (direccion) => {
-    if (direccion === "Derecha" && this.x <260) {
+    if (direccion === "Derecha" && this.x <450) {
       this.x += this.speed;
     console.log(this.x)
       
     } 
     
-    else  if (direccion === "Izquierda" && this.x > 10 ) 
+    else  if (direccion === "Izquierda" && this.x > 90 ) 
     this.x -= this.speed;
     console.log(this.x)
   };
