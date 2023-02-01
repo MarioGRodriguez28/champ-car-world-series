@@ -21,8 +21,8 @@ const startGame = () => {
 };
 
 const restartGame = () => {
-  startScreenDOM.style.display = "none";
-  canvas.style.display = "block";
+  // startScreenDOM.style.display = "flex";
+  // canvas.style.display = "block";
 
   game = new Game();
   console.log(game);
