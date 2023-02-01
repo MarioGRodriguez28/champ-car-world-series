@@ -2,11 +2,11 @@
 class Carrito {
   // ----------------------------------------------------propiedades del Carrito----------------------------------------------------
   constructor() {
-    this.x = 145;
+    this.x = 221;
     this.y = 320;
     this.w = 58;
     this.h = 105;
-    this.speed = 110;
+    this.speed = 200;
     this.image = new Image();
     this.image.src = "./images/RacingCar1.png";
     // this.speedMove = 10;
@@ -17,7 +17,7 @@ class Carrito {
   };
 
   moveCar = (direccion) => {
-    if (direccion === "Derecha" && this.x <255) {
+    if (direccion === "Derecha" && this.x <400) {
       this.x += this.speed;
     console.log(this.x)
       

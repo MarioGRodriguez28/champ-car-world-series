@@ -10,7 +10,7 @@ class Game {
     this.competitorArr = [];
     this.frame = 1;
 
-    this.spaceCar = 150;
+    this.spaceCar = 155;
     this.gameOn = true;
   }
 
@@ -37,17 +37,22 @@ class Game {
 
   compRace = () => {
     if (this.competitorArr.length === 0 || this.frame % 120 === 0) {
-      let carPosX = Math.floor(Math.random() * 10);
-
+      
+      //--- Competidor 1
+      let carPosX = Math.floor(Math.random() * 30);
       let compAdd = new Competidores(carPosX, true);
       this.competitorArr.push(compAdd);
+
+     //--- Competidor 2
 
       setTimeout(() => {
         let compAdd2 = new Competidores(compAdd.x + this.spaceCar, false);
         this.competitorArr.push(compAdd2);
-      }, 3100);
-
-      let compAdd3 = new Competidores(carPosX + compAdd.x + this.spaceCar);
+      }, 3100); 
+      
+      //--- Competidor 3
+      let carPosX2 = Math.floor(Math.random() * 422) 
+      let compAdd3 = new Competidores(carPosX2);
       this.competitorArr.push(compAdd3);
     }
   };
