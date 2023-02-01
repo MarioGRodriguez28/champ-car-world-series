@@ -23,7 +23,7 @@ class Carrito {
       
     } 
     
-    else  if (direccion === "Izquierda" && this.x > -40 ) 
+    else  if (direccion === "Izquierda" && this.x > 10 ) 
     this.x -= this.speed;
     console.log(this.x)
   };

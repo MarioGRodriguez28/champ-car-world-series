@@ -19,7 +19,6 @@ class Game {
 
 
 
-
   gameOver = () => {
     this.gameOn = false;
 
@@ -52,7 +51,25 @@ class Game {
       let compAdd2 = new Competidores(compAdd.x + this.spaceCar, false);
       this.competitorArr.push(compAdd2);
     }
-  };
+//-----------------------------------------------
+    // for (let i = 0; i < Math.floor(Math.random() * 2) + 1; i++) {
+    //   let carPosX = Math.floor(Math.random() * 3)
+  
+      // if (this.competitorArr.length > 0) {
+      //   if (carPosX === this.competitorArr[this.competitorArr.length - 1][1]) {
+      //     i--;
+      //   }
+      //   else {
+      //     this.competitorArr.push([carPosX, this.competitorArr* -1]);
+      //   }
+      // }
+      // else {
+      //   this.competitorArr.push([carPosX, this.competitorArr * -1]);
+      // } 
+      //console.log("esto que hace")
+    // }
+
+  };  
 
   
   drawBG = () => {

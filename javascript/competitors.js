@@ -1,14 +1,14 @@
 // console.log("Prueba pruebita Competitors")
 class Competidores {
   // propiedades de los Competidores
-  constructor(xPos, otherCar) {
+  constructor(xPos, oneCar) {
     this.x = xPos;
     this.y = -110;
     this.w = 116;
     this.h = 210;
     this.speed = 5;
     this.image = new Image();
-    if (otherCar === true) {
+    if (oneCar === true) {
       this.image.src = "./images/RacingCar3.png";
     } else {
       this.image.src = "./images/RacingCar6.png";

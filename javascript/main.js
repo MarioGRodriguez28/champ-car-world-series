@@ -4,6 +4,7 @@ const startBtnDOM = document.querySelector("#start-btn");
 const canvas = document.querySelector("#canvas");
 const startScreenDOM = document.querySelector("#start-game");
 const gameOverScreenDom = document.querySelector("#gameover-screen");
+const restartBtnDOM = document.querySelector("#restart-btn");
 const ctx = canvas.getContext("2d");
 let game;
 
@@ -19,9 +20,11 @@ const startGame = () => {
   game.gameLoop();
 };
 
+
+
 // ADD EVENT LISTENERS
 startBtnDOM.addEventListener("click", startGame);
-
+restartBtnDOM.addEventListener("click", startGame);
 window.addEventListener("keydown", (event) => {
   if (event.code === "ArrowRight") {
     game.car.moveCar("Derecha");
