@@ -10,7 +10,7 @@ class Game {
     this.competitorArr = [];
     this.frame = 1;
 
-    this.spaceCar = 350;
+    this.spaceCar = 150;
     this.gameOn = true;
   }
 
@@ -46,8 +46,10 @@ class Game {
         let compAdd2 = new Competidores(compAdd.x + this.spaceCar, false);
         this.competitorArr.push(compAdd2);
       }, 3100);
+
+      let compAdd3 = new Competidores(carPosX + compAdd.x + this.spaceCar);
+      this.competitorArr.push(compAdd3);
     }
-    clearInterval(setTimeout);
   };
 
   drawBG = () => {

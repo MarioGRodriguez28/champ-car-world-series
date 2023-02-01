@@ -10,9 +10,10 @@ class Competidores {
     this.image = new Image();
     if (oneCar === true) {
       this.image.src = "./images/RacingCar3.png";
-    } else {
+    }else if (oneCar === false) {
       this.image.src = "./images/RacingCar6.png";
-    }
+    }else {
+      this.image.src = "./images/RacingCar15.png";}
   }
 
   drawComp = () => {
