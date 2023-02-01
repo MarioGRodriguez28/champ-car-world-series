@@ -4,8 +4,8 @@ class Competidores {
   constructor(xPos, oneCar) {
     this.x = xPos;
     this.y = -110;
-    this.w = 116;
-    this.h = 210;
+    this.w = 58;
+    this.h = 105;
     this.speed = 6;
     this.image = new Image();
     if (oneCar === true) {
