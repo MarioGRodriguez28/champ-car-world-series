@@ -14,12 +14,15 @@ class Game {
     this.gameOn = true;
   }
 
+
   gameOver = () => {
     this.gameOn = false;
 
     canvas.style.display = "none";
 
     gameOverScreenDom.style.display = "flex";
+    
+    restartBtnDOM="flex"
   };
 
   colisionCar = () => {

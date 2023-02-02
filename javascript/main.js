@@ -13,6 +13,8 @@ let game;
 const startGame = () => {
   startScreenDOM.style.display = "none";
   canvas.style.display = "block";
+ 
+
 
   game = new Game();
   console.log(game);
@@ -21,8 +23,11 @@ const startGame = () => {
 };
 
 const restartGame = () => {
-  // startScreenDOM.style.display = "flex";
-  // canvas.style.display = "block";
+  startScreenDOM.style.display = "none";
+  canvas.style.display = "block";
+  gameOverScreenDom.style.display = "none";
+  
+
 
   game = new Game();
   console.log(game);
