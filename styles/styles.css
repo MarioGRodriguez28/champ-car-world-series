@@ -22,22 +22,42 @@ margin: 0;
   justify-content: center;
   align-items: center;
   margin: 50px;
-}
- #canvas{
-  display: none;
 
+  top: calc(36% - 240px);
+  left: calc(50% - 160px);
+}
+
+
+
+ #canvas{
+  display:none;
+ background-color: lightgray;
+ box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.241);
 }
 
 #gameover-screen{
   display: none;
 
 }
-#canvas {
-  background-color: lightgray;
- 
+
+
+#score {
+  background-color: #f7791a;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  display: none;
+  /* top: 90px;
+  left: 10px; */
+  text-shadow: -2px 0 black, -2px 2px black, -2px -2px black, 0 2px black, 2px 0 black, 2px 2px black, 2px -2px black, 0 -2px black;
 }
 
+#logo{
+  margin-top: 25%;
+  align-items: rigth;
 
+}
 
-
-
+#logoscore{
+  display: none;
+}

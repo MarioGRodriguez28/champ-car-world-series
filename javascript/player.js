@@ -3,7 +3,7 @@ class Carrito {
   // ----------------------------------------------------propiedades del Carrito----------------------------------------------------
   constructor() {
     this.x = 221;
-    this.y = 320;
+    this.y = 480;
     this.w = 58;
     this.h = 105;
     this.speed = 200;
