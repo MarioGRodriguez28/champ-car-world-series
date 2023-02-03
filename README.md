@@ -80,4 +80,4 @@ class Competidores {
 
 ### Slides
 
-[Link](www.your-url-here.com)
+[Link](https://github.com/MarioGRodriguez28/champ-car-world-series)
