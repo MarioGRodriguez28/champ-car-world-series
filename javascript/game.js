@@ -1,4 +1,3 @@
-// console.log("Prueba pruebita game");
 class Game {
   // propiedades
   constructor() {
@@ -15,10 +14,12 @@ class Game {
 
     this.score = 1;
 
-    this.soundGame = new Audio ("./sound/impulse-132715.mp3")
-    this.soundGame.volume =0.05
-    this.crashCar = new Audio ("./sound/crash-6711.mp3")
-    this.crashCar.volume =0.05
+    this.soundGame = new Audio("./sound/impulse-132715.mp3")
+    this.soundGame.volume = 0.05
+    this.crashCar = new Audio("./sound/crash-6711.mp3")
+    this.crashCar.volume = 0.05
+    this.carEngine = new Audio("./sound/audi.mp3")
+    this.carEngine.volume = 0.05
   }
 
 
@@ -46,6 +47,8 @@ class Game {
         eachComp.y < this.car.y + this.car.h &&
         eachComp.h + eachComp.y > this.car.y
       ) {
+        this.carEngine.pause()
+        this.soundGame.pause()
         this.crashCar.play()
         this.gameOver();
       }
@@ -54,6 +57,7 @@ class Game {
 
   compRace = () => {
     if (this.competitorArr.length === 0 || this.frame % 120 === 0) {
+
       //--- Competidor 1
       let carPosX = Math.floor(Math.random() * 30);
       let compAdd = new Competidores(carPosX, true);
@@ -70,7 +74,7 @@ class Game {
       let carPosX2 = Math.floor(Math.random() * 422);
       let compAdd3 = new Competidores(carPosX2);
       this.competitorArr.push(compAdd3);
-    }
+    } this.carEngine.play()
   };
 
   drawBG = () => {
@@ -84,6 +88,7 @@ class Game {
   gameLoop = () => {
     this.soundGame.play()
     this.frame++;
+
     //Limpiar Canvas
     this.clearCanvas();
 
@@ -113,10 +118,9 @@ class Game {
     this.scoreDisplay();
 
 
-
-    //
     if (this.gameOn === true) {
       requestAnimationFrame(this.gameLoop);
     }
+
   };
 }

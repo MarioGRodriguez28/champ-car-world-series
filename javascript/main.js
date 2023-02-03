@@ -1,4 +1,3 @@
-// console.log("Prueba pruebita main")
 // GLOBAL VARIABLES
 const startBtnDOM = document.querySelector("#start-btn");
 const canvas = document.querySelector("#canvas");
@@ -18,10 +17,9 @@ const startGame = () => {
   canvas.style.display = "block";
   scoreDOM.style.display = "block";
   logoscoreDOM.style.display = "block";
-
+ 
   game = new Game();
   console.log(game);
-
   game.gameLoop();
 };
 

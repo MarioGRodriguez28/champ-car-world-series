@@ -1,20 +1,20 @@
-body{
-background-image: url(../images/road-forest.jpg); 
-background-size: cover;
-margin: 0;
-
+body {
+  background-image: url(../images/road-forest.jpg);
+  background-size: cover;
+  margin: 0;
 }
 
-#start-btn, #restart-btn, #pause-btn {
+#start-btn,
+#restart-btn,
+#pause-btn {
   background-color: #f7791a;
   color: white;
   padding: 20px;
   font-size: 20px;
   margin-top: 40px;
-  border-radius: 20px; 
+  border-radius: 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.195);
 }
-
 
 .container {
   display: flex;
@@ -23,23 +23,18 @@ margin: 0;
   align-items: center;
   margin: 50px;
 
-  top: calc(36% - 240px);
-  left: calc(50% - 160px);
+  
 }
 
-
-
- #canvas{
-  display:none;
- background-color: lightgray;
- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.241);
-}
-
-#gameover-screen{
+#canvas {
   display: none;
-
+  background-color: lightgray;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.241);
 }
 
+#gameover-screen {
+  display: none;
+}
 
 #score {
   background-color: #f7791a;
@@ -49,15 +44,28 @@ margin: 0;
   display: none;
   /* top: 90px;
   left: 10px; */
+  text-shadow: -2px 0 black, -2px 2px black, -2px -2px black, 0 2px black,
+    2px 0 black, 2px 2px black, 2px -2px black, 0 -2px black;
+}
+
+#logo {
+  margin-top: 25%;
+  align-items: rigth;
+}
+
+#logoscore {
+  display: none;
+}
+
+#instruction{
+ padding: 70px;
+text-align: center;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  
   text-shadow: -2px 0 black, -2px 2px black, -2px -2px black, 0 2px black, 2px 0 black, 2px 2px black, 2px -2px black, 0 -2px black;
 }
 
-#logo{
-  margin-top: 25%;
-  align-items: rigth;
-
-}
-
-#logoscore{
-  display: none;
-}

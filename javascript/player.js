@@ -1,4 +1,3 @@
-// console.log("Prueba pruebita Player")
 class Carrito {
   // ----------------------------------------------------propiedades del Carrito----------------------------------------------------
   constructor() {
@@ -9,7 +8,6 @@ class Carrito {
     this.speed = 200;
     this.image = new Image();
     this.image.src = "./images/RacingCar1.png";
-    // this.speedMove = 10;
   }
 
   drawCar = () => {
