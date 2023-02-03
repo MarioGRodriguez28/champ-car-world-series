@@ -1,4 +1,4 @@
-#Champ Car World Series
+# Champ Car World Series
 
 ## [Play the Game](https://mariogrodriguez28.github.io/champ-car-world-series/)
 
